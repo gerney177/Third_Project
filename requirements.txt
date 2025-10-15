@@ -1,0 +1,196 @@
+# LLM 기반 투자 조언 서비스 의존성 목록
+# Investment Advisor Service Dependencies
+
+# 핵심 프레임워크 및 라이브러리
+# Core Frameworks and Libraries
+flask==2.3.3
+flask-cors==4.0.0
+requests==2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# LLM 및 트랜스포머 관련
+# LLM and Transformers
+torch>=2.0.0
+transformers>=4.35.0
+sentence-transformers==2.2.2
+tiktoken==0.5.1
+
+# 벡터 데이터베이스 및 검색
+# Vector Database and Search
+chromadb>=0.4.15
+rank-bm25==0.2.2
+numpy>=1.24.0
+
+# 자연어 처리
+# Natural Language Processing
+nltk>=3.8.1
+langchain>=0.0.335
+langchain-community>=0.0.38
+
+# YouTube 및 미디어 처리 제거됨
+# YouTube and Media Processing removed
+
+# 데이터 처리 및 유틸리티
+# Data Processing and Utilities
+pandas>=2.0.0
+scikit-learn>=1.3.0
+jsonschema>=4.19.0
+
+# 로깅 및 모니터링
+# Logging and Monitoring
+python-json-logger==2.0.7
+
+# 개발 및 테스트
+# Development and Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.1
+black>=23.9.1
+flake8>=6.1.0
+
+# 선택적 의존성 (GPU 지원)
+# Optional Dependencies (GPU Support)
+# 주석 해제시 GPU 가속 활성화
+# Uncomment for GPU acceleration
+# accelerate>=0.24.0
+# bitsandbytes>=0.41.0
+
+# 보안 및 인증 (운영환경용)
+# Security and Authentication (Production)
+# 주석 해제시 보안 기능 추가
+# Uncomment for security features
+# pyjwt>=2.8.0
+# cryptography>=41.0.0
+
+# API 문서화 (선택사항)
+# API Documentation (Optional)
+# 주석 해제시 Swagger 문서 활성화
+# Uncomment for Swagger documentation
+# flask-restx>=1.2.0
+# flask-swagger-ui>=4.11.1
+
+# 비동기 처리 (향후 확장용)
+# Async Processing (Future Enhancement)
+# 주석 해제시 비동기 처리 활성화
+# Uncomment for async processing
+# aiohttp>=3.8.0
+# asyncio>=3.4.3
+
+# 데이터베이스 (확장 시 사용)
+# Database (For Future Extensions)
+# 주석 해제시 데이터베이스 지원 추가
+# Uncomment for database support
+# sqlalchemy>=2.0.0
+# alembic>=1.12.0
+
+# 모니터링 및 메트릭 (운영환경용)
+# Monitoring and Metrics (Production)
+# 주석 해제시 모니터링 기능 추가
+# Uncomment for monitoring
+# prometheus-client>=0.17.0
+# psutil>=5.9.0
+
+# 캐싱 (성능 최적화용)
+# Caching (Performance Optimization)
+# 주석 해제시 Redis 캐싱 활성화
+# Uncomment for Redis caching
+# redis>=5.0.0
+# flask-caching>=2.1.0
+
+# 환경 설정 관리
+# Environment Configuration
+python-dotenv>=1.0.0
+
+# HTTP 클라이언트 확장
+# Extended HTTP Client
+httpx>=0.25.0
+
+# 날짜 및 시간 처리
+# Date and Time Processing
+python-dateutil>=2.8.2
+
+# 파일 처리 및 압축
+# File Processing and Compression
+chardet>=5.2.0
+
+# 정규 표현식 확장
+# Extended Regular Expressions
+regex>=2023.10.3
+
+# 설정 파일 처리
+# Configuration File Processing
+pyyaml>=6.0.1
+configparser>=6.0.0
+
+# 멀티프로세싱 지원
+# Multiprocessing Support
+multiprocessing-logging>=0.3.4
+
+# 타입 힌팅 지원
+# Type Hints Support
+typing-extensions>=4.8.0
+
+# 네트워크 및 URL 처리
+# Network and URL Processing
+urllib3>=2.0.0
+validators>=0.22.0
+
+# 텍스트 처리 확장
+# Extended Text Processing
+unidecode>=1.3.7
+ftfy>=6.1.1
+
+# 수학적 계산
+# Mathematical Calculations
+scipy>=1.11.0
+
+# 프로그레스 바 및 UI
+# Progress Bar and UI
+tqdm>=4.66.0
+
+# 메모리 효율적 처리
+# Memory Efficient Processing
+memory-profiler>=0.61.0
+
+# 병렬 처리
+# Parallel Processing
+joblib>=1.3.0
+
+# 하드웨어 정보
+# Hardware Information
+gpustat>=1.1.1
+
+# KIS API 관련 의존성 제거됨
+# KIS API dependencies removed
+
+# 설치 참고사항:
+# Installation Notes:
+#
+# 1. 기본 설치 (CPU 모드):
+#    pip install -r requirements.txt
+#
+# 2. GPU 모드 (NVIDIA GPU 필요):
+#    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+#    pip install -r requirements.txt
+#
+# 3. 개발 환경 설정:
+#    pip install -r requirements.txt
+#    python -m nltk.downloader punkt punkt_tab
+#
+# 4. 운영 환경 (Docker):
+#    FROM python:3.9-slim
+#    COPY requirements.txt .
+#    RUN pip install --no-cache-dir -r requirements.txt
+#
+# 5. Conda 환경:
+#    conda create -n investment-advisor python=3.9
+#    conda activate investment-advisor
+#    pip install -r requirements.txt
+
+# 버전 호환성 정보:
+# Version Compatibility:
+# - Python: 3.8+
+# - CUDA: 11.8+ (GPU 모드)
+# - Node.js: 16+ (프론트엔드 연동시)
+# - Redis: 6+ (캐싱 사용시)
+
